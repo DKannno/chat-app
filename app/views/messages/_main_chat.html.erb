@@ -12,7 +12,8 @@
 </div>
 
 <div class="messages">
-  <div class="message">
+<%= render partial: 'message', collection: @messages %>
+  <%# <div class="message">
     <div class="upper-message">
       <div class="message-user">
         Tom
@@ -26,9 +27,9 @@
         おはよう
       </div>
     </div>
-  </div>
-<%# 以下気になる %>
-  <div class="message">
+  </div> %>
+<%# 以下気になる→やはり消える運命部分テンプレート導入 %>
+  <%# <div class="message">
     <div class="upper-message">
       <div class="message-user">
         Sim
@@ -42,7 +43,7 @@
         こんばんは
       </div>
     </div>
-  </div>
+  </div> %>
 </div>
 
 <%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f|%>
